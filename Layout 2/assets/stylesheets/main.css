@@ -1,0 +1,26 @@
+p {
+    color:darkcyan ;
+}
+.box1 {
+    height: 150px;
+    width: 100%;
+    text-align: center;
+    border: 2px solid black ;
+    display: inline-block;
+    margin-top: 230px;
+}
+.box2 {
+    height: 150px;
+    width: 30%;
+    text-align: center;
+    border: 2px solid black;
+    display: inline-block;
+    margin-top: 10px;
+}
+.box3 {
+    height: 150px;
+    width: 69%;
+    text-align: center;
+    border: 2px solid black;
+    display: inline-block;
+}

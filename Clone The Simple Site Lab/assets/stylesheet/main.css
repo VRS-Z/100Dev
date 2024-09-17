@@ -1,0 +1,31 @@
+.text {
+  text-align: center;
+}
+body { 
+  background-color: #84cbea;
+  color: white;
+}
+body {border: 3px solid #50c639;}
+body {width: 98%; height: 100%;} 
+a {
+  color: green;
+}
+.one {
+  color: white;
+}
+a {
+  border-right: 2px solid black;
+  padding: 0 10px; 
+}
+  .two {
+  all: unset;
+  color: green;
+}
+.title {
+  max-width: 25%;
+ margin: auto;
+ display: 700px inline-block;
+}
+img {
+  float: right;
+}
