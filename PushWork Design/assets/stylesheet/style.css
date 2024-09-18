@@ -142,18 +142,18 @@ h3 {
 
 .card-section {
   margin-top: 12%;
-  margin-bottom: 30%;
+  margin-bottom: 15%;
 }
 
 .text-h3 {
-  margin-inline-start: -60%;
-  margin-inline-end: -30%;
+  margin-inline-start: 0%;
+  margin-inline-end: -70%;
 }
 
 .background-black {
   background-color: black;
-  margin-left: -180%;
-  margin-right: 100%;
+  margin-right: 10%;
+  margin-left: -30%;
 }
 
 .button-footer {
@@ -317,10 +317,167 @@ h3 {
   margin-top: 0.5rem;
 }
 
+.schedules {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 500px;
+  margin: 0 auto;
+  margin-top: 0%;
+  margin-left: 35%;
+}
+
 .row:nth-of-type(1) {
   margin-left: 4rem;
 }
 
 .row:nth-of-type(2) {
   margin-left: -4rem;
+}
+
+@media (max-width: 600px) {
+  body {
+    overflow-x: hidden;
+  }
+  header {
+    max-width: 100%;
+  }
+  .nav-hero {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    margin-left: 3%;
+  }
+  .nav-hero button {
+    width: 30%;
+  }
+  .hero-container {
+    display: flex;
+    flex-direction: column;
+    margin-inline-start: 0%;
+    margin-inline-end: 0%;
+  }
+  .image-here {
+    background-color: black;
+    width: 300px;
+    height: 200px;
+    margin-top: 5%;
+    margin-left: 9%;
+  }
+  .social-links {
+    margin-top: 0%;
+    margin-left: 0%;
+  }
+  .about-us {
+    margin-inline-start: 0%;
+    margin-inline-end: 0%;
+  }
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 500px;
+    margin: 0 auto;
+    margin-top: 5%;
+    margin-left: 0%;
+  }
+  .schedules {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0%;
+  }
+  .text-h3 {
+    margin-inline-end: 0%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .background-black {
+    background-color: black;
+    margin-right: 0%;
+    height: 200px;
+    margin-left: 0%;
+  }
+  .text-how-does-it-work {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-inline-start: 0%;
+    margin-inline-end: 0%;
+  }
+  .background-image {
+    background-color: black;
+    width: 100%;
+    height: 200px;
+    margin-left: 0%;
+    margin-bottom: 4%;
+    margin-top: 4%;
+  }
+  .sinopse-how-does-it-work {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-inline-start: 0%;
+    margin-inline-end: 0%;
+    margin-top: 5%;
+  }
+  .header-all-is-one {
+    margin-inline-start: 0%;
+    margin-inline-end: 0%;
+    margin-bottom: 0%;
+  }
+  .row {
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+  }
+  .row:nth-of-type(1) {
+    margin-left: 0rem;
+  }
+  .row:nth-of-type(2) {
+    margin-left: 0rem;
+  }
+  .text-of-last-section {
+    margin-inline-start: 0%;
+    margin-inline-end: 0%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .image-last-section {
+    background-color: black;
+    width: 360px;
+    height: 200px;
+    margin-top: 0%;
+    margin-left: 0%;
+  }
+  .button-last-section {
+    margin-top: 10px;
+    margin-inline-start: 30%;
+  }
+  .text-of-true-last-section {
+    margin-inline-start: 3%;
+    margin-inline-end: 3%;
+  }
+  .center-button {
+    margin-top: 40px;
+  }
+  .footer-column {
+    width: 100%;
+  }
+  .footer-container {
+    margin-top: 10%;
+    display: flex;
+    max-width: 100%;
+    margin: 0 auto;
+    flex-direction: column;
+  }
+  .footer-start {
+    background-color: gray;
+    height: 180px;
+  }
+  .button-footer {
+    margin-top: 0%;
+    margin-left: 20%;
+  }
 }
