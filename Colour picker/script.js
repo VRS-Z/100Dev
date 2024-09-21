@@ -1,9 +1,8 @@
-function chargerForBlue() {
-  let body = document.body;
-  body.style.background = "blue";
-}
+document.addEventListener("DOMContentLoaded", function () {
+  const colorPicker = document.getElementById("favcolor");
+  const changeColorBtn = document.getElementById("changeColorBtn");
 
-function chargerForRed() {
-  let body = document.body;
-  body.style.background = "red";
-}
+  changeColorBtn.addEventListener("click", function () {
+    document.body.style.backgroundColor = colorPicker.value;
+  });
+});

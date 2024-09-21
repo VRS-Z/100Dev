@@ -7,7 +7,11 @@
     <script src="script.js"></script>
   </head>
   <body>
-    <button onclick="chargerForBlue()">blue</button>
-    <button onclick="chargerForRed()">red</button>
+    <form action="/action_page.php">
+      <label for="favcolor">Select your favorite color:</label>
+      <input type="color" id="favcolor" name="favcolor" value="#ff0000" />
+      <!-- <input type="submit" value="Submit" /> -->
+      <button type="button" id="changeColorBtn">Submit</button>
+    </form>
   </body>
 </html>
