@@ -1,26 +1,36 @@
-function jogar(escolhaJogador1) {
-  const opcoes = ["pedra", "papel", "tesoura"];
-  const escolhaJogador2 = opcoes[Math.floor(Math.random() * 3)];
+function play(choosePlayer1) {
+  const options = ["rock", "paper", "scissors"];
+  const choosePlayer2 = options[Math.floor(Math.random() * 3)];
 
-  let resultado = "";
+  let result = "";
 
   if (
-    (escolhaJogador1 === "pedra" && escolhaJogador2 === "tesoura") ||
-    (escolhaJogador1 === "tesoura" && escolhaJogador2 === "papel") ||
-    (escolhaJogador1 === "papel" && escolhaJogador2 === "pedra")
+    (choosePlayer1 === "rock" && choosePlayer2 === "scissors") ||
+    (choosePlayer1 === "scissors" && choosePlayer2 === "paper") ||
+    (choosePlayer1 === "paper" && choosePlayer2 === "rock")
   ) {
-    resultado = "Player 1 wins!";
+    result = "Player 1 wins!";
   } else if (
-    (escolhaJogador2 === "pedra" && escolhaJogador1 === "tesoura") ||
-    (escolhaJogador2 === "tesoura" && escolhaJogador1 === "papel") ||
-    (escolhaJogador2 === "papel" && escolhaJogador1 === "pedra")
+    (choosePlayer2 === "rock" && choosePlayer1 === "scissors") ||
+    (choosePlayer2 === "scissors" && choosePlayer1 === "paper") ||
+    (choosePlayer2 === "paper" && choosePlayer1 === "rock")
   ) {
-    resultado = "Player 2 (Computer) wins!";
+    result = "Player 2 (Computer) wins!";
   } else {
-    resultado = "It's a tie!";
+    result = "It's a tie!";
   }
 
   document.getElementById(
-    "resultado"
-  ).innerText = `You chose ${escolhaJogador1}, computer chose ${escolhaJogador2}. ${resultado}`;
+    "result"
+  ).innerText = `You chose ${choosePlayer1}, computer chose ${choosePlayer2}. ${result}`;
 }
+
+document.getElementById("rock").addEventListener("click", function () {
+  play("rock");
+});
+document.getElementById("paper").addEventListener("click", function () {
+  play("paper");
+});
+document.getElementById("scissors").addEventListener("click", function () {
+  play("scissors");
+});
