@@ -1,0 +1,363 @@
+.navbar {
+  background-color: #333;
+  overflow: hidden;
+}
+
+.navbar .nav-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.navbar .nav-list li {
+  float: left;
+}
+
+.navbar .nav-list li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+.navbar .nav-list li a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown .dropbtn {
+  display: flex;
+  align-items: center;
+}
+
+.arrow-down {
+  margin-left: 5px;
+  font-size: 12px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #ddd;
+  color: black;
+}
+
+.search-container {
+  position: relative;
+  width: 300px;
+}
+
+form {
+  display: flex;
+  align-items: center;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px 40px 10px 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 40px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+button svg {
+  fill: #555;
+  width: 20px;
+  height: 20px;
+}
+
+body,
+html {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "montserrat", sans-serif;
+}
+
+.mon {
+  display: flex;
+  align-items: center;
+  border-left: 1px solid white;
+  padding: 0 0px;
+  position: relative;
+}
+
+nav {
+  margin-top: 0%;
+  display: flex;
+  background-color: black;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 50px;
+  align-items: center;
+}
+.pp {
+  position: absolute;
+  top: 75%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
+.sob {
+  top: 60%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  position: relative;
+}
+.sob1 {
+  position: relative;
+  top: 30%;
+  right: 35%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
+.sob2 {
+  position: relative;
+  top: 28%;
+  right: 11%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
+.sup {
+  position: relative;
+  top: 31%;
+  right: 9%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  border-left: 4px solid red;
+  padding: 0 10px;
+  margin-left: 2%;
+}
+.sob3 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.image {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.point {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border-left: 4px solid red;
+  padding: 0 10px;
+  margin-left: 2%;
+}
+.point2 {
+  position: relative;
+  margin-left: 15px;
+  display: flex;
+  align-items: center;
+  border-left: 4px solid red;
+  padding: 0 10px;
+}
+.point3 {
+  position: relative;
+  top: 90%;
+  right: 81%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  align-items: center;
+  border-left: 4px solid red;
+  padding: 0 5px;
+}
+.box0 {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+.wrapper {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-auto-rows: 160px;
+  gap: 15px;
+}
+.wrapper img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+.sub img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+.box1 {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-end: 3;
+  grid-row-start: 1;
+  position: relative;
+}
+.box2 {
+  grid-column-start: 5;
+  grid-column-end: 7;
+  grid-row-end: 2;
+  grid-row-start: 1;
+  position: relative;
+}
+.box3 {
+  grid-column-start: 7;
+  grid-column-end: 9;
+  grid-row-end: 3;
+  grid-row-start: 2;
+  position: relative;
+}
+.box4 {
+  grid-column-start: 5;
+  grid-column-end: 7;
+  grid-row-end: 3;
+  grid-row-start: 2;
+  position: relative;
+}
+.box5 {
+  grid-column-start: 7;
+  grid-column-end: 9;
+  grid-row-end: 2;
+  grid-row-start: 1;
+  position: relative;
+}
+
+.sub {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 230px;
+  gap: 5px;
+}
+
+.sub > div {
+  position: relative;
+  padding: 1%;
+}
+
+@media screen and (max-width: 700px) {
+  .nav {
+    display: flex;
+    background-color: black;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 50px;
+    align-items: center;
+  }
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .wrapper {
+    border: 2px solid white;
+    border-radius: 5px;
+  }
+  .wrapper > div {
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 1em;
+    height: 250px;
+  }
+  .nested {
+    border: 2px solid #ffec99;
+    border-radius: 5px;
+    padding: 1em;
+  }
+  .sub {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }
+  .sub > div {
+    width: 39%;
+    height: 150px;
+    gap: 10px;
+  }
+  .sub {
+    border: 2px solid white;
+    border-radius: 5px;
+  }
+  .sub > div {
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 1em;
+  }
+}

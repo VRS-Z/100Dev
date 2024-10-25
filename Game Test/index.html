@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jogo da Forca</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 50px;
+      }
+      #palavra,
+      #mensagem {
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+      input[type="text"] {
+        font-size: 18px;
+        padding: 5px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Jogo da Forca</h1>
+    <div id="palavra"></div>
+    <input type="text" id="letra" maxlength="1" />
+    <button onclick="verificarPalpite()">Enviar Palpite</button>
+    <div id="mensagem"></div>
+
+    <script>
+      const palavras = [
+        "programacao",
+        "python",
+        "desenvolvimento",
+        "algoritmo",
+        "computador",
+      ];
+      let palavra = escolherPalavra();
+      let letrasCertas = new Set();
+      let letrasErradas = new Set();
+      let tentativasRestantes = 6;
+
+      function escolherPalavra() {
+        return palavras[Math.floor(Math.random() * palavras.length)];
+      }
+
+      function mostrarPalavra() {
+        return palavra
+          .split("")
+          .map((letra) => (letrasCertas.has(letra) ? letra : "_"))
+          .join(" ");
+      }
+
+      function atualizarTela() {
+        document.getElementById("palavra").innerText = mostrarPalavra();
+        document.getElementById(
+          "mensagem"
+        ).innerText = `Tentativas restantes: ${tentativasRestantes}`;
+      }
+
+      function verificarPalpite() {
+        const input = document.getElementById("letra");
+        const palpite = input.value.toLowerCase();
+
+        if (!palpite.match(/[a-z]/i) || palpite.length !== 1) {
+          alert("Por favor, digite uma única letra.");
+          return;
+        }
+
+        if (letrasCertas.has(palpite) || letrasErradas.has(palpite)) {
+          alert("Você já tentou essa letra.");
+          return;
+        }
+
+        if (palavra.includes(palpite)) {
+          letrasCertas.add(palpite);
+        } else {
+          letrasErradas.add(palpite);
+          tentativasRestantes--;
+        }
+
+        if (palavra.split("").every((letra) => letrasCertas.has(letra))) {
+          document.getElementById(
+            "mensagem"
+          ).innerText = `Parabéns! Você adivinhou a palavra '${palavra}'.`;
+          document.getElementById("letra").disabled = true;
+          return;
+        }
+
+        if (tentativasRestantes <= 0) {
+          document.getElementById(
+            "mensagem"
+          ).innerText = `Você perdeu! A palavra era '${palavra}'.`;
+          document.getElementById("letra").disabled = true;
+          return;
+        }
+
+        atualizarTela();
+        input.value = "";
+      }
+
+      atualizarTela();
+    </script>
+  </body>
+</html>
