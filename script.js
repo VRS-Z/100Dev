@@ -237,3 +237,58 @@ function sayHello(firstName, lastName) {
     console.log("Please enter a valid positive number for the radius.");
   }
   
+  for (let i = 1; i <= 7; i++) {
+    let triangleLine = '#'.repeat(i);
+    console.log(triangleLine);
+}
+
+let size = 8;
+let chessboard = '';
+
+for (let i = 0; i < size; i++) {
+    for (let j = 0; j < size; j++) {
+        if ((i + j) % 2 === 0) {
+            chessboard += ' ';
+        } else {
+            chessboard += '#';
+        }
+    }
+    chessboard += '\n';
+}
+
+console.log(chessboard);
+
+function min(a, b) {
+  return a < b ? a : b;
+}
+
+console.log(min(0, 10));  // → 0
+console.log(min(0, -10)); // → -10
+
+function isEven(n) {
+  if (n < 0) return isEven(-n);
+  if (n === 0) return true;
+  if (n === 1) return false;
+  return isEven(n - 2);
+}
+
+console.log(isEven(50));  // → true
+console.log(isEven(75));  // → false
+console.log(isEven(-1));  // → false
+
+function countChar(string, char) {
+  let count = 0;
+  for (let i = 0; i < string.length; i++) {
+      if (string[i] === char) {
+          count++;
+      }
+  }
+  return count;
+}
+
+function countBs(string) {
+  return countChar(string, 'B');
+}
+
+console.log(countBs("BBC"));          // → 2
+console.log(countChar("kakkerlak", "k")); // → 4
