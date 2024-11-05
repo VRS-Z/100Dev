@@ -8,11 +8,11 @@ console.log(4 + 5); // Display like this "4 + 5"
 console.log("4 + 5"); // Sum the two values
 console.log("4" + "5"); // Not run
 
-// const firstName = prompt("Give me you firstName");
+ const firstName = prompt("Give me you firstName");
 
-// const lastName = prompt("Give me you lastName");                          
+ const lastName = prompt("Give me you lastName");                          
 
-// alert(`Hello, ${firstName} ${lastName}`);
+ alert(`Hello, ${firstName} ${lastName}`);
 
 let a = 2;
 a -= 1;
