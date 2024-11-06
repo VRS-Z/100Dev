@@ -34,3 +34,5 @@ while (true) {
 }
 
 console.log("Palavras digitadas: ", palavras);
+
+
