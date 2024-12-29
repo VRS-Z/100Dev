@@ -16,28 +16,32 @@
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <link rel="stylesheet" href="assets/stylesheet/style.css" />
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
   </head>
   <body>
-    <input type="text" placeholder="Day" id="day" />
-    <input type="text" placeholder="Month" id="month" />
-    <input type="text" placeholder="Year" id="year" />
+    <div class="container">
+      <div class="sub-container">
+        <label for="text">Day</label>
+        <input type="text" placeholder="DD" id="day" />
+      </div>
+      <div class="sub-container">
+        <label for="text">Month</label>
+        <input type="text" placeholder="MM" id="month" />
+      </div>
+      <div class="sub-container">
+        <label for="text">Year</label>
+        <input type="text" placeholder="YYYY" id="year" />
+      </div>
+    </div>
 
-    Day DD Month MM Year YYYY -- years -- months -- days
+    <button onclick="agir()" class="btn">
+      <img src="assets/images/icon-arrow.svg" alt="" />
+    </button>
 
-    <button onclick="agir()">Init</button>
-
-    <p id="resultYear"></p>
-    <p id="resultMonth"></p>
-    <p id="resultDay"></p>
+    <div class="result">
+      <p id="resultYear"><i>- - </i><strong> Years</strong></p>
+      <p id="resultMonth"><i>- - </i><strong> Months</strong></p>
+      <p id="resultDay"><i>- - </i><strong> Days</strong></p>
+    </div>
 
     <div class="attribution">
       Challenge by
