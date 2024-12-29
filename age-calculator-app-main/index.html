@@ -2,7 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
     <!-- displays site properly based on user's device -->
 
     <link
@@ -20,22 +23,28 @@
   <body>
     <div class="container">
       <div class="sub-container">
-        <label for="text">Day</label>
+        <label for="text">DAY</label>
         <input type="text" placeholder="DD" id="day" />
+        <label for="text" id="erroDay"></label>
       </div>
       <div class="sub-container">
-        <label for="text">Month</label>
+        <label for="text">MONTH</label>
         <input type="text" placeholder="MM" id="month" />
+        <label for="text" id="erroMonth"></label>
       </div>
       <div class="sub-container">
-        <label for="text">Year</label>
+        <label for="text">YEAR</label>
         <input type="text" placeholder="YYYY" id="year" />
+        <label for="text" id="erroYear"></label>
       </div>
     </div>
 
-    <button onclick="agir()" class="btn">
-      <img src="assets/images/icon-arrow.svg" alt="" />
-    </button>
+    <div class="container-btn">
+      <hr />
+      <button onclick="agir()" class="btn">
+        <img src="assets/images/icon-arrow.svg" alt="Button to init" />
+      </button>
+    </div>
 
     <div class="result">
       <p id="resultYear"><i>- - </i><strong> Years</strong></p>

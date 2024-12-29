@@ -1,4 +1,9 @@
 body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -27,7 +32,6 @@ body {
 }
 
 .result {
-  margin-top: 20px;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -35,19 +39,19 @@ body {
 
 .result strong {
   color: black;
-  font-size: x-large;
+  font-size: xxx-large;
 }
 
 .result i {
-  color: purple;
-  font-size: x-large;
+  color: rgb(146, 30, 255);
+  font-size: xxx-large;
 }
 
 .btn {
   border-radius: 70%;
   width: 70px;
   height: 70px;
-  background-color: purple;
+  background-color: rgb(146, 30, 255);
   border: none;
 }
 
@@ -63,4 +67,59 @@ img {
 .btn:hover {
   cursor: pointer;
   background-color: black;
+}
+
+hr {
+  margin-inline-start: 13%;
+  margin-inline-end: -6%;
+  margin-block-start: 40px;
+  margin-block-end: 40px;
+  width: 410px;
+  border: 1px solid lightgray;
+}
+
+.container-btn {
+  display: flex;
+  flex-direction: row;
+}
+
+@media screen and (max-width: 800px) {
+  body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+
+  .container {
+    width: 80px;
+    margin-top: 18%;
+  }
+
+  hr {
+    margin-inline-start: 8%;
+    margin-inline-end: -50%;
+    margin-block-start: 40px;
+    margin-block-end: 40px;
+    width: 340px;
+    border: 1px solid lightgray;
+  }
+
+  .sub-container {
+    max-width: 100%;
+  }
+
+  .result {
+    max-width: 100%;
+  }
+
+  .container-btn {
+    margin-top: 5%;
+  }
+
+  .attribution {
+    margin-top: 10%;
+  }
 }

@@ -87,7 +87,41 @@ function getYearDiff(date1, date2) {
   return year1 - year2 - 1 + yearComplete;
 }
 
+function empty() {
+  if (
+    document.getElementById("month").value == "" ||
+    document.getElementById("day").value == "" ||
+    document.getElementById("year").value == ""
+  ) {
+    return (
+      (document.getElementById("erroYear").innerHTML =
+        "Preencha todos os campos!") &&
+      (document.getElementById("erroMonth").innerHTML =
+        "Preencha todos os campos!") &&
+      (document.getElementById("erroDay").innerHTML =
+        "Preencha todos os campos!")
+    );
+  }
+}
+
+function erro() {
+  if (document.getElementById("month").value > 12) {
+    return (document.getElementById("erroMonth").innerHTML =
+      "Mês inválido! Digite um mês válido!");
+  }
+  if (document.getElementById("day").value > 31) {
+    return (document.getElementById("erroDay").innerHTML =
+      "Dia inválido! Digite um dia válido!");
+  }
+  if (document.getElementById("year").value > 2021) {
+    return (document.getElementById("erroYear").innerHTML =
+      "Ano inválido! Digite um ano válido!");
+  }
+}
+
 function agir() {
+  empty();
+  erro();
   const bornDate = new Date(
     /*year=*/ Number(document.getElementById("year").value),
     /*month=*/ Number(document.getElementById("month").value) - 1,
